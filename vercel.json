@@ -1,0 +1,12 @@
+{
+  "name": "cong-cu-tinh-luong",
+  "version": 2,
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "cleanUrls": true
+}

@@ -2,6 +2,10 @@
 
 Công cụ tính lương Gross sang Net và ngược lại, hỗ trợ so sánh 2 offer khác nhau để tìm ra "Tổng giá trị thực" (Total Value) bạn nhận được mỗi năm. Ứng dụng đã được cập nhật theo **Luật Thuế TNCN 2025** và **Nghị định 293/2025** có hiệu lực từ 01/01/2026.
 
+<img width="1348" height="805" alt="image" src="https://github.com/user-attachments/assets/4753c09f-bd19-49ba-8681-415ab8dac2e3" />
+
+#### Thử ngay tại: https://cong-cu-tinh-luong.vercel.app
+
 ## 🌟 Tính năng nổi bật
 
 ### 1. Tính lương Gross ↔ Net chính xác

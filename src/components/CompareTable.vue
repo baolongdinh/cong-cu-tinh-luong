@@ -225,11 +225,24 @@ const insights = computed(() => {
   margin: 0;
 }
 
+@media (max-width: 600px) {
+  .compare-header h2 {
+    font-size: 1.1rem;
+  }
+}
+
 .winner-badge {
   padding: 0.4rem 1.25rem;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .winner-badge {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+  }
 }
 
 .winner-badge.win { background: rgba(16,185,129,0.15); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.3); }
@@ -246,6 +259,17 @@ const insights = computed(() => {
   border-radius: 16px;
 }
 
+@media (max-width: 768px) {
+  .winner-visual {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem 1rem;
+  }
+  .vs-divider {
+    transform: rotate(90deg);
+  }
+}
+
 .offer-summary {
   flex: 1;
   text-align: center;
@@ -253,6 +277,15 @@ const insights = computed(() => {
   border-radius: 12px;
   position: relative;
   transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .offer-summary {
+    width: 100%;
+  }
+  .os-value {
+    font-size: 1.5rem !important;
+  }
 }
 
 .offer-summary.winner {
@@ -284,11 +317,19 @@ const insights = computed(() => {
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 1rem;
+  /* Horizontal scroll for table on small screens */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 600px; /* Ensure table has enough room to show data clearly */
+}
+
+@media (max-width: 600px) {
+  /* No need to stack, horizontal scroll is better for wide tables to keep peer comparisons clear */
 }
 
 thead tr {
@@ -307,6 +348,11 @@ th {
 
 th.row-label {
   text-align: left;
+  position: sticky;
+  left: 0;
+  background: #0d1226; /* Match row-label background for sticky look */
+  z-index: 10;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
 }
 
 th.col-a { color: #a5b4fc; }
@@ -322,6 +368,11 @@ td {
 
 td.row-label {
   text-align: left;
+  position: sticky;
+  left: 0;
+  background: #0d1226; /* Dark semi-opaque background for visibility during horizontal scroll */
+  z-index: 10;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
 }
 
 tr:last-child td { border-bottom: none; }
@@ -354,11 +405,26 @@ tr.total-row td {
   padding: 0.75rem 1rem;
 }
 
+tr.section-header td.row-label, 
+tr.total-row td.row-label {
+  background: #141b3a; /* Darker variant for headers/totals */
+}
+
 .analysis-box {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 16px;
   padding: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .analysis-box {
+    padding: 1rem;
+  }
+  .insight {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
 }
 
 .analysis-title {

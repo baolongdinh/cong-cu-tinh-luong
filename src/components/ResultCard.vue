@@ -166,6 +166,13 @@ const insuranceLabel = computed(() => {
   backdrop-filter: blur(20px);
 }
 
+@media (max-width: 600px) {
+  .result-card {
+    padding: 1.25rem 1rem;
+    border-radius: 16px;
+  }
+}
+
 .result-card.theme-blue { border-color: rgba(99, 102, 241, 0.25); }
 .result-card.theme-purple { border-color: rgba(139, 92, 246, 0.25); }
 
@@ -204,6 +211,17 @@ const insuranceLabel = computed(() => {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 480px) {
+  .hero-numbers {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .arrow {
+    transform: rotate(90deg);
+  }
+}
+
 .hero-item { flex: 1; }
 
 .hero-label {
@@ -236,6 +254,15 @@ const insuranceLabel = computed(() => {
   padding: 1.25rem;
   text-align: center;
   margin-bottom: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .total-value-box {
+    padding: 1rem;
+  }
+  .total-amount {
+    font-size: 1.5rem;
+  }
 }
 
 .total-label {
@@ -291,6 +318,11 @@ const insuranceLabel = computed(() => {
 
 .detail-row.indent { padding-left: 1rem; }
 .detail-row.sub { padding-left: 2rem; opacity: 0.7; font-size: 0.81rem; }
+
+@media (max-width: 480px) {
+  .detail-row.sub { padding-left: 1rem; }
+}
+
 .detail-row.divider { border-top: 1px dashed rgba(255,255,255,0.06); margin: 0.25rem 0; }
 .detail-row.total-row {
   border-top: 1px solid rgba(255,255,255,0.08);
@@ -311,6 +343,15 @@ const insuranceLabel = computed(() => {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.6rem;
+}
+
+@media (max-width: 480px) {
+  .annual-grid {
+    grid-template-columns: 1fr;
+  }
+  .annual-item.total {
+    grid-column: span 1;
+  }
 }
 
 .annual-item {

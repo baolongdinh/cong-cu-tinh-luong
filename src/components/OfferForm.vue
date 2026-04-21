@@ -156,6 +156,13 @@ const decBonus = () => { if (local.bonusMonth > 0) local.bonusMonth -= 0.5 }
   transition: box-shadow 0.3s ease;
 }
 
+@media (max-width: 600px) {
+  .form-card {
+    padding: 1.25rem 1rem;
+    border-radius: 16px;
+  }
+}
+
 .form-card:hover {
   box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
@@ -234,6 +241,13 @@ const decBonus = () => { if (local.bonusMonth > 0) local.bonusMonth -= 0.5 }
   display: flex;
   gap: 0.5rem;
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  .input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 .salary-input-wrap {
@@ -331,6 +345,18 @@ const decBonus = () => { if (local.bonusMonth > 0) local.bonusMonth -= 0.5 }
   background: rgba(99,102,241,0.1);
 }
 
+@media (max-width: 600px) {
+  .opt-card {
+    padding: 0.5rem 0.75rem;
+  }
+  .opt-desc {
+    display: none; /* Hide descriptions on mobile to keep it clean */
+  }
+  .opt-label {
+    font-size: 0.85rem;
+  }
+}
+
 .custom-bh-wrap {
   margin-top: 0.65rem;
   background: rgba(245, 158, 11, 0.08);
@@ -389,6 +415,14 @@ const decBonus = () => { if (local.bonusMonth > 0) local.bonusMonth -= 0.5 }
   width: fit-content;
 }
 
+@media (max-width: 600px) {
+  .stepper {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.6rem 1rem;
+  }
+}
+
 .step-btn {
   width: 28px;
   height: 28px;
@@ -402,6 +436,13 @@ const decBonus = () => { if (local.bonusMonth > 0) local.bonusMonth -= 0.5 }
   align-items: center;
   justify-content: center;
   transition: all 0.2s;
+}
+
+@media (max-width: 600px) {
+  .step-btn {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .step-btn:hover {

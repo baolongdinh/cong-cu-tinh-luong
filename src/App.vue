@@ -124,7 +124,7 @@ const breakeven = computed(() => {
 .app-header {
   background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
   border-bottom: 1px solid rgba(99, 102, 241, 0.3);
-  padding: 1.5rem 2rem;
+  padding: 1.5rem var(--container-px);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -193,7 +193,7 @@ h1 {
   flex: 1;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: var(--main-padding);
   width: 100%;
   box-sizing: border-box;
 }
@@ -258,7 +258,7 @@ h1 {
 .app-footer {
   background: rgba(15, 23, 42, 0.5);
   border-top: 1px solid rgba(255,255,255,0.05);
-  padding: 1.5rem 2rem;
+  padding: 1.5rem var(--container-px);
   text-align: center;
 }
 
@@ -272,12 +272,57 @@ h1 {
   color: rgba(251, 191, 36, 0.5) !important;
 }
 
-@media (max-width: 900px) {
-  .compare-grid, .single-grid {
+@media (max-width: 1024px) {
+  .single-grid {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 900px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    padding: 1rem var(--container-px);
+  }
+  
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    font-size: 1.1rem;
+  }
+  
+  .subtitle {
+    display: none; /* Hide subtitle on very small screens to save space */
+  }
+  
+  .version-badge {
+    display: none;
+  }
+
   .mode-switcher {
+    gap: 0.4rem;
+    padding: 0.35rem;
+    border-radius: 12px;
+  }
+  
+  .mode-btn {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.75rem;
     flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .mode-icon {
+    font-size: 1.2rem;
   }
 }
 </style>
